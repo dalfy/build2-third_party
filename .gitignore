@@ -1,6 +1,7 @@
 # Compiler/linker output.
 #
-.bdep
+builds/
+.bdep/
 *.d
 *.t
 *.i
