@@ -1,0 +1,11 @@
+: 1
+name: libglm
+version: 0.9.9
+project: dungeon
+summary: OpenGL Mathematics (GLM)
+license: MIT
+url: https://glm.g-truc.net
+email: olivier.delannoy@gmail.com
+depends: * build2 >= 0.8.0-
+depends: * bpkg >= 0.8.0-
+#depends: libhello ^1.0.0

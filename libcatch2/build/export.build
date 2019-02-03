@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libcatch2/
+}
+
+export $out_root/libcatch2/$import.target

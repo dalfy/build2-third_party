@@ -1,0 +1,25 @@
+int_libs = # Interface dependencies.
+imp_libs = # Implementation dependencies.
+
+lib{glm}: {hxx ixx txx}{** -version} $imp_libs $int_libs
+
+# Build options.
+#
+cxx.poptions =+ "-I$out_root" "-I$src_root"
+
+# Export options.
+#
+lib{glm}:
+{
+  cxx.export.poptions = "-I$out_root" "-I$src_root"
+  cxx.export.libs = $int_libs
+}
+
+# Install into the glm/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+{hxx ixx txx}{*}:
+{
+  install         = include/glm/
+  install.subdirs = true
+}

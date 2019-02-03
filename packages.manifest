@@ -1,2 +1,6 @@
 :1 
 location: libjson
+:
+location: libglm
+:
+location: libcatch2

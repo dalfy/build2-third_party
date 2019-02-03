@@ -1,0 +1,10 @@
+: 1
+name: libcatch2
+version: 2.6.0
+project: dungeon
+summary: Third party library used for writting unit tests
+license: Boost Software License 1.0
+url: https://github.com/catchorg/Catch2
+email: olivier.delannoy@gmail.com
+depends: * build2 >= 0.8.0-
+depends: * bpkg >= 0.8.0-

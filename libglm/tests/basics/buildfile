@@ -1,0 +1,3 @@
+import libs = libglm%lib{glm}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}
