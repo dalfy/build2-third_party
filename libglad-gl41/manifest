@@ -1,6 +1,6 @@
 : 1
 name: libglad-gl41
-version: 0.1.0
+version: 0.2.0
 project: dungeon
 summary: glad-gl41 library
 license: TODO
