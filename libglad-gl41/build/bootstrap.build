@@ -1,0 +1,7 @@
+project = libglad-gl41
+
+using version
+using config
+using test
+using install
+using dist

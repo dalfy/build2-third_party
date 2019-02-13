@@ -1,0 +1,39 @@
+int_libs = # Interface dependencies.
+imp_libs = # Implementation dependencies.
+#import imp_libs += libhello%lib{hello}
+
+lib{glad-gl41}: {h c}{** -version} $imp_libs $int_libs
+
+c.poptions =+ "-I$out_root" "-I$src_root"
+
+obja{*}: c.poptions += -DLIBGLAD_GL41_STATIC_BUILD
+objs{*}: c.poptions += -DLIBGLAD_GL41_SHARED_BUILD
+
+# Export options.
+#
+lib{glad-gl41}:
+{
+  c.export.poptions = "-I$out_root" "-I$src_root"
+  c.export.libs = $int_libs
+}
+
+liba{glad-gl41}: c.export.poptions += -DLIBGLAD_GL41_STATIC
+libs{glad-gl41}: c.export.poptions += -DLIBGLAD_GL41_SHARED
+
+# For pre-releases use the complete version to make sure they cannot be used
+# in place of another pre-release or the final version. See the version module
+# for details on the version.* variable values.
+#
+if $version.pre_release
+  lib{glad-gl41}: bin.lib.version = @"-$version.project_id"
+else
+  lib{glad-gl41}: bin.lib.version = @"-$version.major.$version.minor"
+
+# Install into the libglad-gl41/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+{h}{*}:
+{
+  install         = include/glad/
+  install.subdirs = true
+}

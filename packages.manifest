@@ -4,3 +4,5 @@ location: libjson
 location: libglm
 :
 location: libcatch2
+:
+location: libglad-gl41
