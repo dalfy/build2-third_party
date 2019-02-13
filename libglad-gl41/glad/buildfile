@@ -5,8 +5,7 @@ liba{glad}: {h c}{** -version} $imp_libs $int_libs
 
 c.poptions =+ "-I$out_root" "-I$src_root"
 
-obja{*}: c.poptions += -DLIBGLAD_GL41_STATIC_BUILD
-objs{*}: c.poptions += -DLIBGLAD_GL41_SHARED_BUILD
+obja{*}: c.poptions += 
 
 # Export options.
 #

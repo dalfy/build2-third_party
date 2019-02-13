@@ -1,8 +1,8 @@
 : 1
 name: libglad-gl41
-version: 0.2.0
+version: 0.2.1
 project: dungeon
-summary: glad-gl41 library
+summary: GLAD is an opengl Loader, the code generated for this version support OpenGL 4.1
 license: TODO
 url: https://example.org/dungeon
 email: olivier.delannoy@gmail.com
