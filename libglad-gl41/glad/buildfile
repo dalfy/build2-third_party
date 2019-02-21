@@ -1,5 +1,9 @@
 int_libs = # Interface dependencies.
 imp_libs = # Implementation dependencies.
+if ($cxx.target.class == 'linux')
+{
+  imp_libs =+ dl%libs{dl}
+}
 
 liba{glad}: {h c}{** -version} $imp_libs $int_libs
 
