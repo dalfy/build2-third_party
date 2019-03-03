@@ -1,4 +1,4 @@
-#include <glm/geometric.hpp>
+#include "../geometric.hpp"
 #include <limits>
 
 namespace glm{
@@ -393,6 +393,6 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/func_matrix_simd.inl>
+#	include "func_matrix_simd.inl"
 #endif
 

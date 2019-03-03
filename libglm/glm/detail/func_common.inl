@@ -1,13 +1,13 @@
 /// @ref core
 /// @file glm/detail/func_common.inl
 
-#include <glm/vector_relational.hpp>
-#include <glm/detail/compute_common.hpp>
-#include <glm/detail/type_vec1.hpp>
-#include <glm/detail/type_vec2.hpp>
-#include <glm/detail/type_vec3.hpp>
-#include <glm/detail/type_vec4.hpp>
-#include <glm/detail/_vectorize.hpp>
+#include "../vector_relational.hpp"
+#include "compute_common.hpp"
+#include "type_vec1.hpp"
+#include "type_vec2.hpp"
+#include "type_vec3.hpp"
+#include "type_vec4.hpp"
+#include "_vectorize.hpp"
 #include <limits>
 
 namespace glm
@@ -84,7 +84,7 @@ namespace detail
 		{
 			GLM_STATIC_ASSERT(std::numeric_limits<U>::is_iec559 || GLM_CONFIG_UNRESTRICTED_GENTYPE, "'mix' only accept floating-point inputs for the interpolator a");
 
-			return vec<L, T, Q>(vec<L, U, Q>(x) + a * vec<L, U, Q>(y - x));
+			return vec<L, T, Q>(vec<L, U, Q>(x) * (static_cast<U>(1) - a) + vec<L, U, Q>(y) * a);
 		}
 	};
 
@@ -107,7 +107,7 @@ namespace detail
 		{
 			GLM_STATIC_ASSERT(std::numeric_limits<U>::is_iec559 || GLM_CONFIG_UNRESTRICTED_GENTYPE, "'mix' only accept floating-point inputs for the interpolator a");
 
-			return vec<L, T, Q>(vec<L, U, Q>(x) + a * vec<L, U, Q>(y - x));
+			return vec<L, T, Q>(vec<L, U, Q>(x) * (static_cast<U>(1) - a) + vec<L, U, Q>(y) * a);
 		}
 	};
 
@@ -127,7 +127,7 @@ namespace detail
 		{
 			GLM_STATIC_ASSERT(std::numeric_limits<U>::is_iec559 || GLM_CONFIG_UNRESTRICTED_GENTYPE, "'mix' only accept floating-point inputs for the interpolator a");
 
-			return static_cast<T>(static_cast<U>(x) + a * static_cast<U>(y - x));
+			return static_cast<T>(static_cast<U>(x) * (static_cast<U>(1) - a) + static_cast<U>(y) * a);
 		}
 	};
 
@@ -783,5 +783,5 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/func_common_simd.inl>
+#	include "func_common_simd.inl"
 #endif

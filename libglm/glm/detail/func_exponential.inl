@@ -1,8 +1,8 @@
 /// @ref core
 /// @file glm/detail/func_exponential.inl
 
-#include <glm/vector_relational.hpp>
-#include <glm/detail/_vectorize.hpp>
+#include "../vector_relational.hpp"
+#include "_vectorize.hpp"
 #include <limits>
 #include <cmath>
 #include <cassert>
@@ -147,6 +147,6 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/func_exponential_simd.inl>
+#	include "func_exponential_simd.inl"
 #endif
 

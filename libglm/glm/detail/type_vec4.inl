@@ -1,6 +1,6 @@
 /// @ref core
 
-#include <glm/detail/compute_vector_relational.hpp>
+#include "compute_vector_relational.hpp"
 
 namespace glm{
 namespace detail
@@ -1136,5 +1136,5 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/type_vec4_simd.inl>
+#	include "type_vec4_simd.inl"
 #endif

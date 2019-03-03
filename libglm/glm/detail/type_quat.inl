@@ -1,6 +1,6 @@
-#include <glm/trigonometric.hpp>
-#include <glm/exponential.hpp>
-#include <glm/ext/quaternion_geometric.hpp>
+#include "../trigonometric.hpp"
+#include "../exponential.hpp"
+#include "../ext/quaternion_geometric.hpp"
 #include <limits>
 
 namespace glm{
@@ -374,6 +374,6 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/type_quat_simd.inl>
+#	include "type_quat_simd.inl"
 #endif
 

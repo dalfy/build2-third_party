@@ -1,7 +1,7 @@
 int_libs = # Interface dependencies.
 imp_libs = # Implementation dependencies.
 
-lib{glm}: {hxx ixx txx h}{** -version} $imp_libs $int_libs
+lib{glm}: {hxx ixx txx h cxx}{** -version} $imp_libs $int_libs
 
 # Build options.
 #

@@ -1,8 +1,8 @@
 /// @ref core
 /// @file glm/detail/func_packing.inl
 
-#include <glm/common.hpp>
-#include <glm/detail/type_half.hpp>
+#include "../common.hpp"
+#include "type_half.hpp"
 
 namespace glm
 {
@@ -184,6 +184,6 @@ namespace glm
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/func_packing_simd.inl>
+#	include "func_packing_simd.inl"
 #endif
 

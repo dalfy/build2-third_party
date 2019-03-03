@@ -1,7 +1,7 @@
-#include <glm/trigonometric.hpp>
-#include <glm/geometric.hpp>
-#include <glm/exponential.hpp>
-#include <glm/detail/epsilon.hpp>
+#include "../trigonometric.hpp"
+#include "../geometric.hpp"
+#include "../exponential.hpp"
+#include "epsilon.hpp"
 #include <limits>
 
 namespace glm
@@ -195,6 +195,6 @@ namespace glm
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/quaternion_simd.inl>
+#	include "quaternion_simd.inl"
 #endif
 

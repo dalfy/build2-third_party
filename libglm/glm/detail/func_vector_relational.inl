@@ -83,5 +83,5 @@ namespace glm
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/func_vector_relational_simd.inl>
+#	include "func_vector_relational_simd.inl"
 #endif

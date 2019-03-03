@@ -1,4 +1,4 @@
-#include <glm/detail/_vectorize.hpp>
+#include "_vectorize.hpp"
 #include <cmath>
 #include <limits>
 
@@ -192,6 +192,6 @@ namespace glm
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include <glm/detail/func_trigonometric_simd.inl>
+#	include "func_trigonometric_simd.inl"
 #endif
 

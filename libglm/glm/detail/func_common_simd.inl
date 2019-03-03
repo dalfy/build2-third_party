@@ -3,7 +3,7 @@
 
 #if GLM_ARCH & GLM_ARCH_SSE2_BIT
 
-#include <glm/simd/common.h>
+#include "../simd/common.h"
 
 #include <immintrin.h>
 
