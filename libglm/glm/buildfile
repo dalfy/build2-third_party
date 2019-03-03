@@ -1,7 +1,7 @@
 int_libs = # Interface dependencies.
 imp_libs = # Implementation dependencies.
 
-lib{glm}: {hxx ixx txx}{** -version} $imp_libs $int_libs
+lib{glm}: {hxx ixx txx h}{** -version} $imp_libs $int_libs
 
 # Build options.
 #
@@ -18,7 +18,7 @@ lib{glm}:
 # Install into the glm/ subdirectory of, say, /usr/include/
 # recreating subdirectories.
 #
-{hxx ixx txx}{*}:
+{h hxx ixx txx}{**}:
 {
   install         = include/glm/
   install.subdirs = true
