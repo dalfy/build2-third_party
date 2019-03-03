@@ -1,5 +1,5 @@
-#include "../exponential.hpp"
-#include "../common.hpp"
+#include <glm/exponential.hpp>
+#include <glm/common.hpp>
 
 namespace glm{
 namespace detail
@@ -239,5 +239,5 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include "func_geometric_simd.inl"
+#	include <glm/detail/func_geometric_simd.inl>
 #endif

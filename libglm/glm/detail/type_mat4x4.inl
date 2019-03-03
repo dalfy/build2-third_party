@@ -1,4 +1,4 @@
-#include "../matrix.hpp"
+#include <glm/matrix.hpp>
 
 namespace glm
 {
@@ -702,5 +702,5 @@ namespace glm
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include "type_mat4x4_simd.inl"
+#	include <glm/detail/type_mat4x4_simd.inl>
 #endif

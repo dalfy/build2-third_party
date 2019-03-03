@@ -1,6 +1,6 @@
 /// @ref core
 
-#include "_vectorize.hpp"
+#include <glm/detail/_vectorize.hpp>
 #if(GLM_ARCH & GLM_ARCH_X86 && GLM_COMPILER & GLM_COMPILER_VC)
 #	include <intrin.h>
 #	pragma intrinsic(_BitScanReverse)
@@ -357,6 +357,6 @@ namespace detail
 }//namespace glm
 
 #if GLM_CONFIG_SIMD == GLM_ENABLE
-#	include "func_integer_simd.inl"
+#	include <glm/detail/func_integer_simd.inl>
 #endif
 
