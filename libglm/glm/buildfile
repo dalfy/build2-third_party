@@ -5,13 +5,13 @@ lib{glm}: {hxx ixx txx}{** -version} $imp_libs $int_libs
 
 # Build options.
 #
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+cxx.poptions =+ "-I$out_root/libglm" "-I$src_root/libglm"
 
 # Export options.
 #
 lib{glm}:
 {
-  cxx.export.poptions = "-I$out_root" "-I$src_root"
+  cxx.export.poptions = "-I$out_root/libglm" "-I$src_root/libglm"
   cxx.export.libs = $int_libs
 }
 
