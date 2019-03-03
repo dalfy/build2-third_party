@@ -1,6 +1,6 @@
 : 1
 name: libglm
-version: 0.9.4-a1
+version: 0.9.9-4
 project: third_party
 summary: OpenGL Mathematics (GLM)
 license: MIT
