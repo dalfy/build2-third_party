@@ -1,4 +1,4 @@
-./: {glad/ glad-debug/ -build/} manifest
+./: glad/ glad-debug/ manifest
 
 # Don't install tests.
 #
