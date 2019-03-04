@@ -1,4 +1,4 @@
-project = libglad-gl41
+project = libglad
 
 using version
 using config
