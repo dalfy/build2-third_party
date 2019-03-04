@@ -1,0 +1,28 @@
+int_libs = # Interface dependencies.
+imp_libs = # Implementation dependencies.
+if ($cxx.target.class == 'linux')
+{
+  imp_libs =+ dl%libs{dl}
+}
+
+lib{glad}: {h c}{**} $imp_libs $int_libs
+
+c.poptions =+ "-I$out_root" "-I$src_root/glad/include"
+
+
+# Export options.
+#
+liba{glad}:
+{
+  c.export.poptions = "-I$out_root" "-I$src_root/glad/include"
+  c.export.libs = $int_libs
+}
+
+# Install into the glad/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+include/ {h}{*}:
+{
+  install         = include/
+  install.subdirs = true
+}

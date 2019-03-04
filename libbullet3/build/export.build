@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libbullet3/
+}
+
+export $out_root/libbullet3/$import.target

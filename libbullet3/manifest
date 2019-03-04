@@ -1,0 +1,11 @@
+: 1
+name: libbullet3
+version: 0.1.0-a.0.z
+project: third_party
+summary: bullet3 library
+license: TODO
+url: https://example.org/third_party
+email: olivier.delannoy@gmail.com
+depends: * build2 >= 0.9.0-
+depends: * bpkg >= 0.9.0-
+#depends: libhello ^1.0.0

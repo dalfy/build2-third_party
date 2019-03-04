@@ -1,8 +1,10 @@
 :1 
-location: libjson
+location: libjson/
 :
-location: libglm
+location: libglm/
 :
-location: libcatch2
+location: libcatch2/
 :
-location: libglad-gl41
+location: libglad/
+:
+location: libbullet3/

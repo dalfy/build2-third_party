@@ -5,25 +5,24 @@ if ($cxx.target.class == 'linux')
   imp_libs =+ dl%libs{dl}
 }
 
-liba{glad}: {h c}{** -version} $imp_libs $int_libs
+lib{glad-debug}: {h c}{**} $imp_libs $int_libs
 
-c.poptions =+ "-I$out_root" "-I$src_root"
+c.poptions =+ "-I$out_root" "-I$src_root/glad-debug/include"
 
-obja{*}: c.poptions += 
 
 # Export options.
 #
-liba{glad}:
+lib{glad-debug}:
 {
-  c.export.poptions = "-I$out_root" "-I$src_root"
+  c.export.poptions = "-I$out_root" "-I$src_root/glad-debug/include"
   c.export.libs = $int_libs
 }
 
 # Install into the glad/ subdirectory of, say, /usr/include/
 # recreating subdirectories.
 #
-{h}{*}:
+include/ {h}{*}:
 {
-  install         = include/glad/
+  install         = include/
   install.subdirs = true
 }

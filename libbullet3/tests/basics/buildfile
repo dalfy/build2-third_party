@@ -1,0 +1,3 @@
+import libs = libbullet3%lib{bullet3}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}
