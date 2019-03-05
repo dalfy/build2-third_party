@@ -1,0 +1,10 @@
+: 1
+name: libnuklear
+version: 0.1.0-a.0.z
+project: third_party
+summary: Nuklear library: This is a minimal state immediate mode graphical user interface toolkit
+license: MIT
+url: https://github.com/vurtun/nuklear
+email: olivier.delannoy@gmail.com
+depends: * build2 >= 0.9.0-
+depends: * bpkg >= 0.9.0-

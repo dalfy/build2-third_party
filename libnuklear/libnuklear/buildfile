@@ -1,0 +1,27 @@
+int_libs = # Interface dependencies.
+imp_libs = # Implementation dependencies.
+#import imp_libs += libhello%lib{hello}
+
+lib{nuklear}: {h hxx ixx txx cxx}{**} $imp_libs $int_libs
+
+# Build options.
+#
+cxx.poptions =+ "-I$out_root" "-I$src_root"
+
+# Export options.
+#
+lib{nuklear}:
+{
+  cxx.export.poptions = "-I$out_root" "-I$src_root"
+  cxx.export.libs = $int_libs
+}
+
+
+# Install into the libnuklear/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+{h}{*}:
+{
+  install         = include/libnuklear/
+  install.subdirs = true
+}

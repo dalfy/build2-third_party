@@ -2,14 +2,15 @@
 	path = libglm/upstream
 	url = https://github.com/g-truc/glm.git
     update = none
-
 [submodule "libbullet3/upstream"]
 	path = libbullet3/upstream
     url = https://github.com/bulletphysics/bullet3.git
     update = none
-
 [submodule "libjson/upstrean"]
 	path = libjson/upstream
 	url = https://github.com/nlohmann/json.git
     update = none
-
+[submodule "libnuklear/upstream"]
+	path = libnuklear/upstream
+	url = https://github.com/vurtun/nuklear.git
+    update = none

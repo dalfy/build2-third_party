@@ -8,3 +8,5 @@ location: libcatch2/
 location: libglad/
 :
 location: libbullet3/
+:
+location: libnuklear/
