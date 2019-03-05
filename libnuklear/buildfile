@@ -1,1 +1,1 @@
-./: {*/ -build/} manifest
+./: libnuklear/ manifest
