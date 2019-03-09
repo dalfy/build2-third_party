@@ -1,6 +1,6 @@
 : 1
 name: libnuklear
-version: 0.1.0-a.0.z
+version: 0.1.0-a.1.z
 project: third_party
 summary: Nuklear library: This is a minimal state immediate mode graphical user interface toolkit
 license: MIT
