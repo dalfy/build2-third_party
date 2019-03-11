@@ -1,6 +1,6 @@
 : 1
 name: libglad
-version: 4.6.2
+version: 4.6.3
 project: dungeon
 summary: GLAD is an opengl Loader, the code generated for this version support OpenGL 4.6
 license: Public Domain 
